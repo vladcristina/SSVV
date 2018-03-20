@@ -48,7 +48,7 @@ public class JUnitControllerTests {
     }
 
     @Test
-    public void saveStudent() throws IOException {
+    public void saveStudentTest() throws IOException {
         assertTrue(ctrl.saveStudent(s1));
         assertFalse(ctrl.saveStudent(s2));
         assertFalse(ctrl.saveStudent(s3));
