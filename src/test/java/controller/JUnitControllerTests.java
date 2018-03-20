@@ -1,6 +1,5 @@
-package test_package;
+package controller;
 
-import controller.LaboratoriesController;
 import model.Student;
 import org.junit.After;
 import org.junit.Before;
@@ -48,7 +47,7 @@ public class JUnitControllerTests {
     }
 
     @Test
-    public void saveStudentTest() throws IOException {
+    public void saveStudentTest() {
         assertTrue(ctrl.saveStudent(s1));
         assertFalse(ctrl.saveStudent(s2));
         assertFalse(ctrl.saveStudent(s3));
