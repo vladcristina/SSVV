@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="27a77d1a-658d-4599-b580-9289e85ec767" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/controller/JUnitControllerTests.java" afterPath="$PROJECT_DIR$/src/test/java/controller/JUnitControllerTests.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,7 +22,7 @@
       <file leaf-file-name="JUnitControllerTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/controller/JUnitControllerTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
+            <state relative-caret-position="-600">
               <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -686,7 +685,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1521541649601</updated>
-      <workItem from="1521541654729" duration="9031000" />
+      <workItem from="1521541654729" duration="9123000" />
     </task>
     <servers />
   </component>
@@ -720,7 +719,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9031000" />
+    <option name="totallyTimeSpent" value="9123000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -872,7 +871,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/controller/JUnitControllerTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
+        <state relative-caret-position="-600">
           <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
