@@ -19,7 +19,7 @@ public class JUnitControllerTests {
     private Student s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13;
     LaboratoriesController ctrl = new LaboratoriesController("students.txt","laboratories.txt");
     @Before
-    public void setUp() throws Exception {
+    public void setUp(){
         s1=new Student("aqsw1234","asd asd", 123);
         s12=new Student("zsed0987","asd asd", 123);
         s13=new Student("zxfg6754","asd asd", 123);
@@ -42,7 +42,7 @@ public class JUnitControllerTests {
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown()  {
         System.out.println("Test Completed");
     }
 
@@ -56,7 +56,7 @@ public class JUnitControllerTests {
     }
 
     @Test
-    public void saveStudentName() throws IOException {
+    public void saveStudentName() {
         assertTrue(ctrl.saveStudent(s12));
         assertFalse(ctrl.saveStudent(s4));
         assertFalse(ctrl.saveStudent(s5));
