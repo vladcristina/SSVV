@@ -15,7 +15,7 @@ import static org.junit.Assert.assertTrue;
  * Created by Cristina on 3/20/2018.
  */
 
-public class JUnitControllerTests {
+public class ControllerTests {
     private Student s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13;
     LaboratoriesController ctrl = new LaboratoriesController("students.txt","laboratories.txt");
     @Before
