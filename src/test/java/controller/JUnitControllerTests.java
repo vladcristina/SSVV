@@ -19,7 +19,7 @@ public class JUnitControllerTests {
     private Student s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13;
     LaboratoriesController ctrl = new LaboratoriesController("students.txt","laboratories.txt");
     @Before
-    public void setUp(){
+    public void setUp() throws Exception{
         s1=new Student("aqsw1234","asd asd", 123);
         s12=new Student("zsed0987","asd asd", 123);
         s13=new Student("zxfg6754","asd asd", 123);
