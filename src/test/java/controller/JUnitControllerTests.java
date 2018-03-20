@@ -55,13 +55,13 @@ public class JUnitControllerTests {
         assertTrue(ctrl.saveStudent(s11));
     }
 
-    @Test
-    public void saveStudentName() {
-        assertTrue(ctrl.saveStudent(s12));
-        assertFalse(ctrl.saveStudent(s4));
-        assertFalse(ctrl.saveStudent(s5));
-        assertFalse(ctrl.saveStudent(s6));
-    }
+//    @Test
+//    public void saveStudentName() {
+//        assertTrue(ctrl.saveStudent(s12));
+//        assertFalse(ctrl.saveStudent(s4));
+//        assertFalse(ctrl.saveStudent(s5));
+//        assertFalse(ctrl.saveStudent(s6));
+//    }
 
 //    @Test
 //    public void saveStudentRegNumber() throws IOException {
