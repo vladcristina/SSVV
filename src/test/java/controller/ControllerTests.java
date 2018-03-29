@@ -58,7 +58,7 @@ public class ControllerTests {
         assertFalse(ctrl.saveStudent(s2));
         assertFalse(ctrl.saveStudent(s3));
         assertFalse(ctrl.saveStudent(s4));
-        assertTrue(ctrl.saveStudent(s8));
+        assertTrue(ctrl.saveStudent(s10));
     }
 
     @Test

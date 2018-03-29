@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="27a77d1a-658d-4599-b580-9289e85ec767" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ui/LaboratoriesUI.java" afterPath="$PROJECT_DIR$/src/main/java/ui/LaboratoriesUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/validator/Validator.java" afterPath="$PROJECT_DIR$/src/main/java/validator/Validator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/controller/ControllerTests.java" afterPath="$PROJECT_DIR$/src/test/java/controller/ControllerTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/students.txt" afterPath="$PROJECT_DIR$/students.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controller/LaboratoriesController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,8 +22,8 @@
       <file leaf-file-name="ControllerTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/controller/ControllerTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="16" column="93" lean-forward="false" selection-start-line="16" selection-start-column="93" selection-end-line="16" selection-end-column="93" />
+            <state relative-caret-position="174">
+              <caret line="55" column="35" lean-forward="true" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2089#2090#0" expanded="true" />
@@ -813,7 +808,7 @@
       <workItem from="1521732933406" duration="700000" />
       <workItem from="1521757810973" duration="1038000" />
       <workItem from="1521759085170" duration="5000" />
-      <workItem from="1522311256785" duration="7495000" />
+      <workItem from="1522311256785" duration="8370000" />
     </task>
     <servers />
   </component>
@@ -847,7 +842,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20543000" />
+    <option name="totallyTimeSpent" value="21418000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1151,8 +1146,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/controller/ControllerTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="16" column="93" lean-forward="false" selection-start-line="16" selection-start-column="93" selection-end-line="16" selection-end-column="93" />
+        <state relative-caret-position="174">
+          <caret line="55" column="35" lean-forward="true" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2089#2090#0" expanded="true" />
