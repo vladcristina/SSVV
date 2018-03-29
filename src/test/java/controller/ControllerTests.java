@@ -14,14 +14,11 @@ import static org.junit.Assert.assertTrue;
  */
 
 public class ControllerTests {
-    private Student s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19;
+    private Student s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21;
     Controller ctrl = new Controller("studentsTest.txt", "laboratoriesTest.txt");
 
     @Before
     public void setUp() throws Exception {
-//        s11 = new Student("aqsw1234", "asd asd", 123);
-//        s12 = new Student("zsed0987", "asd asd", 123);
-//        s13 = new Student("zxfg6754", "asd asd", 123);
 
         //registerNumber
         s1 = new Student("asd1234", "asd asd", 200);
@@ -38,15 +35,17 @@ public class ControllerTests {
         s12 = new Student("a1s2d3f4", "asd asd", 200);
 
         //name
-        s13 = new Student("asdf1231", "asd", 123);
-        s14 = new Student("asdf1232", "asd5 asd6", 123);
-        s15 = new Student("asdf1233", "", 123);
+        s13 = new Student("asdf1234", "asdf asdf asdf", 123);
+        s14 = new Student("asdf1234", "asd5 asd6", 123);
+        s15 = new Student("asdf1234", "", 123);
+        s16 = new Student("asdf1234", "asdf asdf", 123);
+        s17 = new Student("asdf1234", "asdf", 123);
 
         //group
-        s16 = new Student("asdf1235", "asd asd", 99);
-        s17 = new Student("asdf1236", "asd asd", 901);
-        s18 = new Student("asdf1245", "asd asd", 900);
-        s19 = new Student("asdf1267", "asd asd", 100);
+        s18 = new Student("asdf1234", "asd asd", 99);
+        s19 = new Student("asdf1234", "asd asd", 901);
+        s20 = new Student("asdf1234", "asd asd", 900);
+        s21 = new Student("asdf1234", "asd asd", 100);
     }
 
     @After
@@ -63,6 +62,7 @@ public class ControllerTests {
         assertTrue(ctrl.saveStudent(s10));
     }
 
+    //register number
     @Test
     public void saveStudentRegisterNumber_LessLetters_Test() {
         assertFalse(ctrl.saveStudent(s1));
@@ -124,19 +124,52 @@ public class ControllerTests {
     }
 
 
-//    @Test
-//    public void saveStudentName() {
-//        assertTrue(ctrl.saveStudent(s12));
-//        assertFalse(ctrl.saveStudent(s4));
-//        assertFalse(ctrl.saveStudent(s5));
-//        assertFalse(ctrl.saveStudent(s6));
-//    }
+    //name
+    @Test
+    public void saveStudentName_MoreThanTwoNames_Test() {
+        assertFalse(ctrl.saveStudent(s13));
+    }
 
-//    @Test
-//    public void saveStudentRegNumber() throws IOException {
-//        assertTrue(ctrl.saveStudent(s13));
-//        assertFalse(ctrl.saveStudent(s7));
-//        assertTrue(ctrl.saveStudent(s8));
-//        assertFalse(ctrl.saveStudent(s9));
-//    }
+    @Test
+    public void saveStudentName_NamesWithNumbers_Test() {
+        assertFalse(ctrl.saveStudent(s14));
+    }
+
+    @Test
+    public void saveStudentName_NoName_Test() {
+        assertFalse(ctrl.saveStudent(s15));
+    }
+
+    @Test
+    public void saveStudentName_CorrectNameTwoWords_Test() {
+        assertTrue(ctrl.saveStudent(s16));
+    }
+
+    @Test
+    public void saveStudentName_LowerValue_Test() {
+        assertTrue(ctrl.saveStudent(s17));
+    }
+
+
+
+    //group
+    @Test
+    public void saveStudentGroup_CorrectMinValue_Test() {
+        assertFalse(ctrl.saveStudent(s18));
+    }
+
+    @Test
+    public void saveStudentGroup_CorrectMaxValue_Test() {
+        assertFalse(ctrl.saveStudent(s19));
+    }
+
+    @Test
+    public void saveStudentGroup_CorrectGroupMaxValue_Test() {
+        assertTrue(ctrl.saveStudent(s20));
+    }
+
+    @Test
+    public void saveStudentGroup_CorrectGroupMinValue_Test() {
+        assertTrue(ctrl.saveStudent(s21));
+    }
 }
