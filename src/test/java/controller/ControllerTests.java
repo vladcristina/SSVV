@@ -154,12 +154,12 @@ public class ControllerTests {
 
     //group
     @Test
-    public void saveStudentGroup_CorrectMinValue_Test() {
+    public void saveStudentGroup_LowerThanMinValue_Test() {
         assertFalse(ctrl.saveStudent(s18));
     }
 
     @Test
-    public void saveStudentGroup_CorrectMaxValue_Test() {
+    public void saveStudentGroup_HigherThanMaxValue_Test() {
         assertFalse(ctrl.saveStudent(s19));
     }
 
