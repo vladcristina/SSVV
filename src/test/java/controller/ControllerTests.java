@@ -109,7 +109,7 @@ public class ControllerTests {
 
     @Test
     public void saveStudentRegisterNumber_IncorrectOrderLettersAndDigits_Test() {
-        assertTrue(ctrl.saveStudent(s11));
+        assertFalse(ctrl.saveStudent(s11));
     }
 
 

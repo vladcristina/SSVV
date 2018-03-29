@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="27a77d1a-658d-4599-b580-9289e85ec767" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/controller/ControllerTests.java" afterPath="$PROJECT_DIR$/src/test/java/controller/ControllerTests.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,8 +22,8 @@
       <file leaf-file-name="ControllerTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/controller/ControllerTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="110" column="77" lean-forward="false" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="77" />
+            <state relative-caret-position="-800">
+              <caret line="40" column="46" lean-forward="false" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2149#2150#0" expanded="true" />
@@ -811,7 +810,7 @@
       <workItem from="1521732933406" duration="700000" />
       <workItem from="1521757810973" duration="1038000" />
       <workItem from="1521759085170" duration="5000" />
-      <workItem from="1522311256785" duration="10380000" />
+      <workItem from="1522311256785" duration="10507000" />
     </task>
     <servers />
   </component>
@@ -845,7 +844,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23428000" />
+    <option name="totallyTimeSpent" value="23555000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1155,8 +1154,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/controller/ControllerTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="110" column="77" lean-forward="false" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="77" />
+        <state relative-caret-position="-800">
+          <caret line="40" column="46" lean-forward="false" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2149#2150#0" expanded="true" />
