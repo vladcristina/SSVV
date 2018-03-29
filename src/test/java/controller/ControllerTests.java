@@ -14,7 +14,7 @@ import static org.junit.Assert.assertTrue;
  */
 
 public class ControllerTests {
-    private Student s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13;
+    private Student s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13,s14, s15, s16, s17;
     Controller ctrl = new Controller("studentsTest.txt", "laboratoriesTest.txt");
 
     @Before
@@ -36,15 +36,15 @@ public class ControllerTests {
         s10 = new Student("asdf1234", "asd asd", 200);
 
         //name
-        s4 = new Student("asdf1231", "asd", 123);
-        s5 = new Student("asdf1232", "asd5 asd6", 123);
-        s6 = new Student("asdf1233", "", 123);
+        s11 = new Student("asdf1231", "asd", 123);
+        s12 = new Student("asdf1232", "asd5 asd6", 123);
+        s13 = new Student("asdf1233", "", 123);
 
         //group
-        s7 = new Student("asdf1235", "asd asd", 99);
-        s8 = new Student("asdf1236", "asd asd", 901);
-        s9 = new Student("asdf1245", "asd asd", 900);
-        s10 = new Student("asdf1267", "asd asd", 100);
+        s14 = new Student("asdf1235", "asd asd", 99);
+        s15 = new Student("asdf1236", "asd asd", 901);
+        s16 = new Student("asdf1245", "asd asd", 900);
+        s17 = new Student("asdf1267", "asd asd", 100);
     }
 
     @After
