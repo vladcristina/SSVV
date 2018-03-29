@@ -4,18 +4,15 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.List;
 
 //import com.sun.org.apache.xpath.internal.operations.Bool;
-import controller.LaboratoriesController;
+import controller.Controller;
 import model.Laboratory;
 import model.Student;
-import validator.Validator;
 
 public class LaboratoriesUI {
-	private LaboratoriesController controller;
+	private Controller controller;
 
     public LaboratoriesUI(){
     }
@@ -24,7 +21,7 @@ public class LaboratoriesUI {
         System.out.println("Starting");
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        this.controller = new LaboratoriesController("students.txt", "laboratories.txt");
+        this.controller = new Controller("students.txt", "laboratories.txt");
 
         while(true){
             System.out.println(" 1) Add student \n 2) Add laboratory \n 3) Add grade \n 4) Get passing students \n 0) Exit");

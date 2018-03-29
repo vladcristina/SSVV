@@ -16,11 +16,11 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-public class LaboratoriesController {
+public class Controller {
     private StudentFileDataPersistence studentPersistence;
     private LaboratoryFileDataPersistence laboratoryPersistence;
 
-    public LaboratoriesController(String studentFile, String laboratoryFile) {
+    public Controller(String studentFile, String laboratoryFile) {
     	this.studentPersistence = new StudentFileDataPersistence(studentFile);
     	this.laboratoryPersistence = new LaboratoryFileDataPersistence(laboratoryFile);
     }
@@ -68,7 +68,6 @@ public class LaboratoriesController {
             for (Laboratory laboratory : entry.getValue()) {
                 midGrade = (midGrade + laboratory.getGrade()) / 2;
             }
-           // System.out.println(midGrade);
             if (midGrade >= 5) {
                 Student student = new Student();
                 student.setRegNumber(entry.getKey());

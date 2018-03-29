@@ -5,8 +5,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.IOException;
-
 import static junit.framework.TestCase.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -16,44 +14,100 @@ import static org.junit.Assert.assertTrue;
  */
 
 public class ControllerTests {
-    private Student s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13;
-    LaboratoriesController ctrl = new LaboratoriesController("students.txt","laboratories.txt");
-    @Before
-    public void setUp() throws Exception{
-        s1=new Student("aqsw1234","asd asd", 123);
-        s12=new Student("zsed0987","asd asd", 123);
-        s13=new Student("zxfg6754","asd asd", 123);
+    private Student s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13;
+    Controller ctrl = new Controller("studentsTest.txt", "laboratoriesTest.txt");
 
-        //group
-        s2=new Student("asdf1235","asd asd", 99);
-        s3=new Student("asdf1236","asd asd", 901);
-        s10=new Student("asdf1245","asd asd", 900);
-        s11=new Student("asdf1267","asd asd", 100);
+    @Before
+    public void setUp() throws Exception {
+//        s11 = new Student("aqsw1234", "asd asd", 123);
+//        s12 = new Student("zsed0987", "asd asd", 123);
+//        s13 = new Student("zxfg6754", "asd asd", 123);
 
         //registerNumber
-        s4=new Student("asd1239","asd asd", 123);
-        s5=new Student("asdf123","asd asd", 123);
-        s6=new Student("asdfg12367","asd asd", 123);
+        s1 = new Student("asd1234", "asd asd", 200);
+        s2 = new Student("asdf123", "asd asd", 200);
+        s3 = new Student("asdfg1234", "asd asd", 200);
+        s4 = new Student("asdf12345", "asd asd", 200);
+        s5 = new Student("1234", "asd asd", 200);
+        s6 = new Student("asdf", "asd asd", 200);
+        s7 = new Student("as12", "asd asd", 200);
+        s8 = new Student("asdfg12345", "asd asd", 200);
+        s9 = new Student("", "asd asd", 200);
+        s10 = new Student("asdf1234", "asd asd", 200);
 
         //name
-        s7=new Student("asdf1231","asd", 123);
-        s8=new Student("asdf1232","asd5 asd6", 123);
-        s9=new Student("asdf1233","", 123);
+        s4 = new Student("asdf1231", "asd", 123);
+        s5 = new Student("asdf1232", "asd5 asd6", 123);
+        s6 = new Student("asdf1233", "", 123);
+
+        //group
+        s7 = new Student("asdf1235", "asd asd", 99);
+        s8 = new Student("asdf1236", "asd asd", 901);
+        s9 = new Student("asdf1245", "asd asd", 900);
+        s10 = new Student("asdf1267", "asd asd", 100);
     }
 
     @After
-    public void tearDown()  {
+    public void tearDown() {
         System.out.println("Test Completed");
     }
 
     @Test
     public void saveStudentTest() {
-        assertTrue(ctrl.saveStudent(s1));
+        assertFalse(ctrl.saveStudent(s1));
         assertFalse(ctrl.saveStudent(s2));
         assertFalse(ctrl.saveStudent(s3));
-        assertTrue(ctrl.saveStudent(s10));
-        assertTrue(ctrl.saveStudent(s11));
+        assertFalse(ctrl.saveStudent(s4));
+        assertTrue(ctrl.saveStudent(s8));
     }
+
+    @Test
+    public void saveStudentRegisterNumber_LessLetters_Test() {
+        assertFalse(ctrl.saveStudent(s1));
+    }
+
+    @Test
+    public void saveStudentRegisterNumber_LessDigits_Test() {
+        assertFalse(ctrl.saveStudent(s2));
+    }
+
+    @Test
+    public void saveStudentRegisterNumber_MoreLetters_Test() {
+        assertFalse(ctrl.saveStudent(s3));
+    }
+
+    @Test
+    public void saveStudentRegisterNumber_MoreDigits_Test() {
+        assertFalse(ctrl.saveStudent(s4));
+    }
+
+    @Test
+    public void saveStudentRegisterNumber_NoLetters_Test() {
+        assertFalse(ctrl.saveStudent(s5));
+    }
+
+    @Test
+    public void saveStudentRegisterNumber_NoDigits_Test() {
+        assertFalse(ctrl.saveStudent(s6));
+    }
+
+    @Test
+    public void saveStudentRegisterNumber_MoreLettersAndDigits_Test() {
+        assertFalse(ctrl.saveStudent(s8));
+    }
+
+    @Test
+    public void saveStudentRegisterNumber_NoLettersAndDigits_Test() {
+        assertFalse(ctrl.saveStudent(s9));
+    }
+
+    @Test
+    public void saveStudentRegisterNumber_CorrectNumberLettersAndDigits_Test() {
+        assertFalse(ctrl.saveStudent(s10));
+    }
+
+
+
 
 //    @Test
 //    public void saveStudentName() {
