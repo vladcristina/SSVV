@@ -145,7 +145,7 @@ public class ControllerTests {
     }
 
     @Test
-    public void saveStudentName_LowerValue_Test() {
+    public void saveStudentName_CorrectNameOneWord_Test() {
         assertTrue(ctrl.saveStudent(s17));
     }
 
