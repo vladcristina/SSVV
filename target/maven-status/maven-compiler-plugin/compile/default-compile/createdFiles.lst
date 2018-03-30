@@ -1,0 +1,9 @@
+model\Student.class
+repository\LaboratoryFileDataPersistence.class
+controller\Controller.class
+model\Laboratory.class
+validator\Validator.class
+App.class
+ui\LaboratoriesUI.class
+repository\StudentFileDataPersistence.class
+repository\FileDataPersistence.class
