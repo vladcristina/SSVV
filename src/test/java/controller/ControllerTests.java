@@ -19,7 +19,6 @@ public class ControllerTests {
 
     @Before
     public void setUp() throws Exception {
-
         //registerNumber
         s1 = new Student("asd1234", "asd asd", 200);
         s2 = new Student("asdf123", "asd asd", 200);
