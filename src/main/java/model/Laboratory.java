@@ -12,8 +12,7 @@ public class Laboratory {
     private float grade = 1;
     private String studentRegNumber;
 
-    public Laboratory(int laboratoryNumber, String dateString, int problemNumber,
-                      String studentRegNumber) throws ParseException {
+    public Laboratory(int laboratoryNumber, String dateString, int problemNumber, String studentRegNumber) throws ParseException {
         this.laboratoryNumber = laboratoryNumber; // problemNumber assigned to Number
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
         this.date = format.parse(dateString);
@@ -21,8 +20,7 @@ public class Laboratory {
         this.studentRegNumber = studentRegNumber;
     }
 
-    public Laboratory(int laboratoryNumber, String date, int problemNumber, Float grade,
-                      String studentRegNumber) throws ParseException {
+    public Laboratory(int laboratoryNumber, String date, int problemNumber, Float grade, String studentRegNumber) throws ParseException {
         this.laboratoryNumber = laboratoryNumber; // problemNumber assigned to Number
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
         this.date = format.parse(date);

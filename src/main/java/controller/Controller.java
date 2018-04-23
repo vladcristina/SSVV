@@ -43,7 +43,7 @@ public class Controller {
         }
     }
 
-    public boolean addGrade(String student, String labNumber, float grade) throws NumberFormatException, IOException, ParseException {
+    public boolean addGrade(String student, int labNumber, float grade) throws NumberFormatException, IOException, ParseException {
         if (Validator.validateGrade(grade)) {
             this.laboratoryPersistence.addGrade(student, labNumber, grade);
             return true;

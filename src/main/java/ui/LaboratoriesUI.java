@@ -88,12 +88,13 @@ public class LaboratoriesUI {
                     }
 
                 } else if (line.equals("3")) {
-                    String registrationNumber, labNumber;
+                    String registrationNumber;
+                    int labNumber;
                     float grade;
                     System.out.println("Student registration number(4 letters and 4 digits): ");
                     registrationNumber = br.readLine();
                     System.out.println("Lab number: ");
-                    labNumber = br.readLine();
+                    labNumber = Integer.parseInt(br.readLine());
                     try {
                         System.out.println("Grade: ");
                         String gradeString = br.readLine();
@@ -111,7 +112,7 @@ public class LaboratoriesUI {
                             System.out.println("Grade successfully assigned to the student\n");
                         }
                     } catch (NumberFormatException | IOException | ParseException e) {
-                        System.out.println("Cannot save grade");
+                        System.out.println(e.getMessage());
                     }
 
                 } else if (line.equals("4")) {

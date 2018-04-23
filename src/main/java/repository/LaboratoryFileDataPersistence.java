@@ -13,24 +13,22 @@ import java.util.Map;
 /**
  * Created by Cristina on 3/19/2018.
  */
-public class LaboratoryFileDataPersistence extends FileDataPersistence{
+public class LaboratoryFileDataPersistence extends FileDataPersistence {
     public LaboratoryFileDataPersistence(String file) {
         super(file);
     }
 
-    // No check if laboratory is unique
     public void saveLaboratory(Laboratory laboratory) throws IOException, ParseException {
         Map<String, List<Laboratory>> assignedLaboratories = this.getLaboratoryMap();
         if (assignedLaboratories.get(laboratory.getStudentRegNumber()) != null) {
             for (Laboratory laboratoryInList : assignedLaboratories.get(laboratory.getStudentRegNumber())) {
 //            if (laboratory.getProblemNumber() == laboratoryInList.getProblemNumber() && laboratory.getLaboratoryNumber() == laboratoryInList.getLaboratoryNumber()) {
                 if (laboratory.getLaboratoryNumber() == laboratoryInList.getLaboratoryNumber()) {
-                    //return;
+//                    return;
                     throw new IOException("The lab number is not unique");
                 }
             }
-        }
-        else {
+        } else {
             BufferedWriter writer;
             try {
                 writer = new BufferedWriter(new FileWriter(file, true));
@@ -42,8 +40,8 @@ public class LaboratoryFileDataPersistence extends FileDataPersistence{
         }
     }
 
-    // Ambiguous what field of "Student" should be passed
-    public void addGrade(String studentRegNumber, String labNumber, float grade) throws IOException, NumberFormatException, ParseException {
+    public void addGrade(String studentRegNumber, int labNumber, float grade)
+            throws IOException, NumberFormatException, ParseException {
         File fileA = new File(file);
         File fileB = new File("temp");
 
@@ -56,14 +54,15 @@ public class LaboratoryFileDataPersistence extends FileDataPersistence{
             String[] lineData = line.split(" ");
             String fileLabNumber = lineData[0];
             String fileStudentNumber = lineData[4];
-            if (fileLabNumber.equals(labNumber) && fileStudentNumber.equals(studentRegNumber)) {
+            if (Integer.parseInt(fileLabNumber) == labNumber && fileStudentNumber.equals(studentRegNumber)) {
                 Laboratory laboratory = new Laboratory(
                         Integer.valueOf(lineData[0]), lineData[1],
                         Integer.valueOf(lineData[2]), lineData[4]);
                 laboratory.setGrade(grade);
                 writer.write(laboratory.toString() + "\n");
             } else {
-                writer.write(line + "\n");
+//                writer.write(line + "\n");
+                throw new IOException("The lab number or the the student registration number does not exist in the file");
             }
         }
         writer.close();
