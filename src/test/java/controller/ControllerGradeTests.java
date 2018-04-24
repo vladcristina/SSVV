@@ -45,8 +45,7 @@ public class ControllerGradeTests {
     public void assignLabGrade_StudentRegNumberNotInFile() throws IOException, ParseException {
         try {
             assertFalse(ctrl.addGrade("asd123", 1, grade1));
-        }
-        catch(IOException e){
+        } catch (IOException e) {
             e.getMessage();
         }
     }
@@ -55,8 +54,7 @@ public class ControllerGradeTests {
     public void assignLabGrade_LabNumberNotInFile() throws IOException, ParseException {
         try {
             assertFalse(ctrl.addGrade(s1.getRegNumber(), 3, grade1));
-        }
-        catch(IOException e){
+        } catch (IOException e) {
             e.getMessage();
         }
     }
@@ -65,8 +63,7 @@ public class ControllerGradeTests {
     public void assignLabGrade_WrongGrade() throws IOException, ParseException {
         try {
             assertFalse(ctrl.addGrade(s1.getRegNumber(), 3, grade2));
-        }
-        catch(IOException e){
+        } catch (IOException e) {
             e.getMessage();
         }
     }
