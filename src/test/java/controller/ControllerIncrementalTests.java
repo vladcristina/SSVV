@@ -3,7 +3,6 @@ package controller;
 import model.Laboratory;
 import model.Student;
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,14 +13,13 @@ import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 
 /**
- * Created by Cristina on 4/24/2018.
+ * Created by Cristina on 5/7/2018.
  */
 
-public class ControllerBigBangTests {
+public class ControllerIncrementalTests {
     private Student s1;
     private Laboratory l1;
     private float grade,grade2;
-
     Controller ctrl = new Controller("students.txt", "laboratories.txt");
 
     @Before
@@ -43,20 +41,15 @@ public class ControllerBigBangTests {
     }
 
     @Test
-    public void assignLabGrade_Correct() throws IOException, ParseException {
-        Assert.assertTrue(ctrl.addGrade(s1.getRegNumber(), l1.getLaboratoryNumber(), grade));
-    }
-
-    @Test
-    public void getPassedStudents_Correct() throws IOException, ParseException {
-        assertEquals(1, ctrl.passedStudents().size());
-    }
-
-    @Test
-    public void bigBangTest() throws IOException, ParseException {
+    public void saveStudent_assignLabGrade_Correct() throws IOException, ParseException {
         assertTrue(ctrl.saveStudent(s1));
-        Assert.assertTrue(ctrl.addGrade(s1.getRegNumber(), l1.getLaboratoryNumber(), grade));
-        assertEquals(1, ctrl.passedStudents().size());
+        assertTrue(ctrl.addGrade(s1.getRegNumber(), l1.getLaboratoryNumber(), grade));
     }
 
+    @Test
+    public void saveStudent_assignGrade_getPassedStudents_Correct() throws IOException, ParseException {
+        assertTrue(ctrl.saveStudent(s1));
+        assertTrue(ctrl.addGrade(s1.getRegNumber(), l1.getLaboratoryNumber(), grade));
+        assertEquals(1, ctrl.passedStudents().size());
+    }
 }
